@@ -17,5 +17,9 @@ For more information, check out the guide [here](https://phoenixnap.com/kb/insta
 
 ### Contribution policy
 
-While developing a separate feature for the project, you should work on a separate branch,
-then commit your local changes, and push them to `main` branch
+- First, it should be initially negotiated that parties are developing different features at a time
+to avoid merge conflicts
+- While developing a separate feature, you should work on a separate branch,
+then commit your local changes, and push them to your remote branch.
+Afterward, you have to create a Pull Request, and then merge it to `main` branch.
+**NB**: using IDE Git UI is preferable
