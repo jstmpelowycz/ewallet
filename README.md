@@ -4,6 +4,8 @@
 
 ### How to install
 
+For more information, check out the guide [here](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
+
 - install <span style="color: yellow">Node 16.14.2</span>
 - install <span style="color: yellow">NPM 8.5.0</span>
 - install <span style="color: yellow">NVM 0.39.1</span>
