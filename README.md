@@ -10,3 +10,8 @@
 - clone the repo from GitHub
 - run `npm istall`
 - run `npm start` to test if installation is successful
+
+### Contribution policy
+
+While developing a separate feature for the project, you should work on a separate branch,
+then commit your local changes, and push them to `main` branch
