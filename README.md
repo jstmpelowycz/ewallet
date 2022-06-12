@@ -1,6 +1,8 @@
 # E-Wallet
 
 **<span style="color: skyblue">Authors</span>**: Dmytro Pelovych, Dmytro Parnak
+<br>
+Project on behalf of the course _Research Practice_
 
 ### How to install
 
