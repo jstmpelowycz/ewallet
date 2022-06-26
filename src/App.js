@@ -1,25 +1,38 @@
-import logo from './images/logo.svg';
-import './App.css';
+import { Switch, Route, Redirect } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Auth from "./components/Pages/Auth";
+import Dashboard from "./components/Pages/Dashboard/Dashboard";
+import Greet from "./components/Pages/Greet";
+import Layout from "./components/Pages/Layout";
 
-function App() {
+import "./App.scss";
+import { Fragment } from "react";
+
+const App = () => {
+  const localId = useSelector((state) => state.user.userId.localId);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Layout>
+        <Route path="/" exact>
+          <Redirect to="/auth" />
+        </Route>
+        <Route path="/auth">
+          <Auth />
+        </Route>
+        {localId && (
+          <Fragment>
+            <Route path="/greet">
+              <Greet />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
+            </Route>
+          </Fragment>
+        )}
+      </Layout>
+    </Switch>
   );
-}
+};
 
 export default App;
