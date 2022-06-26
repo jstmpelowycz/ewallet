@@ -1,0 +1,68 @@
+.expense {
+  padding: 2.5rem 0;
+  max-height: 60vh;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @include respond(tab-land) {
+    width: 55%;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &-description {
+      display: flex;
+      align-items: center;
+    }
+
+    &-tag {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-top-left-radius: 1.5rem;
+    }
+
+    &-title {
+      padding-left: 1.5rem;
+      font-size: 1.6rem;
+    }
+
+    &-price {
+      font-size: 1.6rem;
+      font-weight: 500;
+      padding-right: 2rem;
+    }
+  }
+}
+
+.bills {
+  background: $graph-1;
+}
+
+.groceries {
+  background: $graph-2;
+}
+
+.transportation {
+  background: $graph-3;
+}
+
+.luxury {
+  background: $graph-4;
+}
+
+.other {
+  background: $graph-5;
+}
