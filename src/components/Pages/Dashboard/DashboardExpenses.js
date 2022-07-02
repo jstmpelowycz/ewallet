@@ -2,7 +2,7 @@ import React from "react";
 import DashboardCard from "../../UI/DashboardCard";
 import DashboardExpenseItem from "./DashboardExpenseItem";
 import { useSelector } from "react-redux";
-import {JsonToExcel} from "react-json-to-excel";
+import { JsonToExcel } from "react-json-to-excel";
 
 const JSONToExcelButton = (props) => {
   return (
@@ -16,7 +16,7 @@ const JSONToExcelButton = (props) => {
 }
 
 const DashboardExpenses = () => {
-  const expenses = useSelector((state) => state.user.expenses);
+  const expenses = useSelector((state) => state?.user.expenses);
   const reversed = expenses.map((item) => item).reverse();
   console.log(reversed);
 

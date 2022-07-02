@@ -15,7 +15,7 @@
     text-align: center;
 
     &--title {
-      font-family: "Lobster", sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-size: 6.8rem;
       padding: 0 0 2.5rem 0;
       font-weight: 200;
@@ -31,44 +31,9 @@
     }
   }
 
-  &__bubble {
-    position: absolute;
-    width: 100%;
-    top: 30%;
-    left: -10%;
-
-    &--main {
-      height: 74.3rem;
-      width: 74.3rem;
-      border-radius: 50%;
-      background: $color-primary-2;
-    }
-
-    &--secondary {
-      height: 26.4rem;
-      width: 26.4rem;
-      position: absolute;
-      border-radius: 50%;
-      background: rgba($color-primary-1, 0.5);
-      top: 50%;
-      right: -15rem;
-
-      &::before {
-        content: "";
-        height: 40%;
-        width: 40%;
-        position: absolute;
-        border-radius: 50%;
-        top: -2.75rem;
-        left: -1.5rem;
-        background: inherit;
-      }
-    }
-  }
-
   &__option {
     width: 100%;
-    height: 70%;
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "../UI/Button";
-import logo from "../../img/google.png";
 import { useHistory, useLocation } from "react-router-dom";
 
 const AuthHome = () => {
@@ -19,22 +18,18 @@ const AuthHome = () => {
     <div className="auth">
       <div className="auth__attention">
         <h1 className="auth__attention--title">
-          Track<span>Wise</span>
+          E<span>Wallet</span>
         </h1>
-        <p className="auth__attention--slogan">Saving Money Should Be Fun</p>
+        <p className="auth__attention--slogan">Save Your Money Wisely</p>
       </div>
 
       <div className="auth__option">
         <div className="auth__option--container">
-          <Button type="button" btnClass="auth__option--btn2">
-            <div className="auth__option--google">
-              <div className="auth__option--google-logo">
-                <img src={logo} alt="google g" />
-                <p>Sign in with Google</p>
-              </div>
-            </div>
-          </Button>
-          <Button type="button" btnClass="auth__option--btn" onClick={login}>
+          <Button
+            type="button"
+            btnClass="auth__option--btn"
+            onClick={login}
+          >
             Login
           </Button>
           <Button
@@ -45,11 +40,6 @@ const AuthHome = () => {
             Create Account
           </Button>
         </div>
-      </div>
-
-      <div className="auth__bubble">
-        <div className="auth__bubble--main"></div>
-        <div className="auth__bubble--secondary"></div>
       </div>
     </div>
   );
