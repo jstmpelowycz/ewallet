@@ -12,7 +12,9 @@ const DashboardLegendItem = (props) => {
       <div className="legend__item--line">
         <div className="legend__item--line-through"></div>
       </div>
-      <p className="legend__item--price">${props.amount.toFixed(2)}</p>
+      <p className="legend__item--price">
+        ${props.amount.toFixed(2)}
+      </p>
     </li>
   );
 };

@@ -11,11 +11,6 @@ const Greet = () => {
   return (
     <div className="greeting">
       <p>Welcome Back!</p>
-
-      <div className="greeting__bubble">
-        <div className="greeting__bubble--main"></div>
-        <div className="greeting__bubble--secondary"></div>
-      </div>
     </div>
   );
 };

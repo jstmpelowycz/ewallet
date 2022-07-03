@@ -1,14 +1,14 @@
 import React from "react";
-import { PieChart } from "react-minimal-pie-chart";
-import { useSelector } from "react-redux";
+import {PieChart} from "react-minimal-pie-chart";
+import {useSelector} from "react-redux";
+import {colors} from "./colors";
 
 const PieChartDisplay = () => {
   const totalExpenses = useSelector((state) => state.user.totalExpenses);
   const categories = useSelector((state) => state.user.userData.categories);
 
   const valueOf = (am) => {
-    const total = totalExpenses;
-    const amount = +((am / total) * 100).toFixed(2);
+    const amount = +((am / totalExpenses) * 100).toFixed(2);
     return amount;
   };
 
@@ -24,27 +24,27 @@ const PieChartDisplay = () => {
           {
             title: "bills",
             value: valueOf(categories[0].amount),
-            color: "#FA28BF",
+            color: colors.green,
           },
           {
             title: "groceries",
             value: valueOf(categories[1].amount),
-            color: "#3AEB4B",
+            color: colors.yellow,
           },
           {
             title: "transportation",
             value: valueOf(categories[2].amount),
-            color: "#1E93FF",
+            color: colors.blue,
           },
           {
             title: "luxury",
             value: valueOf(categories[3].amount),
-            color: "#F3A736",
+            color: colors.bordeaux,
           },
           {
             title: "other",
             value: valueOf(categories[4].amount),
-            color: "#CED2D9",
+            color: colors.lightgrey,
           },
         ]}
       />
