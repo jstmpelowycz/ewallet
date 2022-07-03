@@ -45,9 +45,9 @@ const DashboardTaxes = (props) => {
                 <summary>Details</summary>
                 <div className="confirm__container--form-progressBar">
                     <ProgressBar style={{height: "30px", fontSize: "15px"}}>
-                        <ProgressBar variant="success" now={esf} key={1} />
-                        <ProgressBar variant="warning" now={pdfo} key={2} />
-                        <ProgressBar variant="danger" now={vz} key={3} />
+                        <ProgressBar variant="success" now={esf} key={1}/>
+                        <ProgressBar variant="warning" now={pdfo} key={2}/>
+                        <ProgressBar variant="danger" now={vz} key={3}/>
                     </ProgressBar>
                 </div>
                 <li className="legend__taxItem">
@@ -58,7 +58,7 @@ const DashboardTaxes = (props) => {
                     <div className="legend__taxItem--line">
                         <div className="legend__taxItem--line-through"></div>
                     </div>
-                    <p className="legend__taxItem--meaning"> —  (Єдиний соціальний внесок) страховий внесок з метою
+                    <p className="legend__taxItem--meaning"> — (Єдиний соціальний внесок) страховий внесок з метою
                         забезпечення захисту у випадках,
                         передбачених законодавством
                         (соціальні гарантії на випадок безробіття, нещасних випадків, пенсійне забезпечення тощо).</p>
@@ -71,7 +71,7 @@ const DashboardTaxes = (props) => {
                     <div className="legend__taxItem--line">
                         <div className="legend__taxItem--line-through"></div>
                     </div>
-                    <p className="legend__taxItem--meaning"> —  (Податок з доходів фізичних осіб) загальнодержавний
+                    <p className="legend__taxItem--meaning"> — (Податок з доходів фізичних осіб) загальнодержавний
                         податок, що стягується з доходів
                         фізичних осіб і нерезидентів, які отримують доходи з джерел їх
                         походження в Україні.</p>
@@ -84,7 +84,7 @@ const DashboardTaxes = (props) => {
                     <div className="legend__taxItem--line">
                         <div className="legend__taxItem--line-through"></div>
                     </div>
-                    <p className="legend__taxItem--meaning"> —  (Військовий збір) це податок, для фізичних осіб
+                    <p className="legend__taxItem--meaning"> — (Військовий збір) це податок, для фізичних осіб
                         (резидентів і нерезидентів), який було запроваджено тимчасово для фінансування Збройних сил
                         України.</p>
                 </li>
@@ -105,10 +105,19 @@ const DashboardTaxes = (props) => {
                             type="number"
                             max="1000000"
                         />
+                        <select
+                            name="country"
+                            id="country"
+                            required="required">
+                            <option defaultValue hidden>
+                                Select country
+                            </option>
+                            <option>Ukraine</option>
+                        </select>
                     </div>
                     <Button btnClass="btn" type="submit">Calculate</Button>
                     <div className="confirm__container--form-result">
-                        <h3>Your taxes are:</h3>
+                        <h3>Your taxes:</h3>
                         <Input
                             value={"₴ " + tax}
                             readOnly="readOnly"

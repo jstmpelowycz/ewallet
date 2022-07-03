@@ -59,6 +59,22 @@
     }
   }
 
+  &__taxes {
+
+    &--form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0.5rem 0 4rem 0;
+    }
+
+
+
+
+  }
+
   &__chart {
     text-align: center;
 
