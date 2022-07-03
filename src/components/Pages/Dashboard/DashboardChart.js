@@ -1,34 +1,40 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import PieChart from "../../UI/Charts/PieChart";
 import BarChart from "../../UI/Charts/BarChart";
 import DashboardCard from "../../UI/DashboardCard";
 
-const DashboardChart = () => {
-  const [chart, setChart] = useState("pie");
+const ChartType = {
+  Pie: "pie",
+  Line: "line",
+}
 
+const months = [
+  ["Jan", 31],
+  ["Feb", 28],
+  ["Mar", 31],
+  ["Apr", 30],
+  ["May", 31],
+  ["Jun", 30],
+  ["Jul", 31],
+  ["Aug", 31],
+  ["Sep", 30],
+  ["Oct", 31],
+  ["Nov", 30],
+  ["Dec", 31],
+];
+
+const DashboardChart = () => {
   const date = new Date();
-  const curMonth = date.getMonth();
-  const months = [
-    ["Jan", 31],
-    ["Feb", 28],
-    ["Mar", 31],
-    ["Apr", 30],
-    ["May", 31],
-    ["Jun", 30],
-    ["Jul", 31],
-    ["Aug", 31],
-    ["Sep", 30],
-    ["Oct", 31],
-    ["Nov", 30],
-    ["Dec", 31],
-  ];
+  const currentMonth = date.getMonth();
+
+  const [chart, setChart] = useState(ChartType.Pie);
 
   const setPieHandler = () => {
-    setChart("pie");
+    setChart(ChartType.Pie);
   };
 
   const setLineHandler = () => {
-    setChart("line");
+    setChart(ChartType.Line);
   };
 
   return (
@@ -37,29 +43,31 @@ const DashboardChart = () => {
         <div className="dashboard__chart-info">
           <p className="dashboard__chart-info--title">Monthly Expenses</p>
           <p className="dashboard__chart-info--date">
-            {months[curMonth][0]} 1 - {months[curMonth][0]}{" "}
-            {months[curMonth][1]}
+            {months[currentMonth][0]} 1 - {months[currentMonth][0]}{" "}
+            {months[currentMonth][1]}
           </p>
         </div>
-        {chart === "pie" && <PieChart />}
-        {chart === "line" && <BarChart />}
+
+        {chart === ChartType.Pie && <PieChart/>}
+        {chart === ChartType.Line && <BarChart/>}
+
         <div className="dashboard__chart-icons">
-          <i
+          <span
             className={
-              chart === "pie"
+              chart === ChartType.Pie
                 ? "fas fa-chart-pie dashboard__chart-icon active"
                 : "fas fa-chart-pie dashboard__chart-icon"
             }
             onClick={setPieHandler}
-          ></i>
-          <i
+          ></span>
+          <span
             className={
-              chart === "line"
+              chart === ChartType.Line
                 ? "far fa-chart-bar dashboard__chart-icon dashboard__chart-icon--bar active"
                 : "far fa-chart-bar dashboard__chart-icon dashboard__chart-icon--bar"
             }
             onClick={setLineHandler}
-          ></i>
+          ></span>
         </div>
       </div>
     </DashboardCard>

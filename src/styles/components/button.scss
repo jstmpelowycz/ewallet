@@ -2,9 +2,18 @@
   color: white;
   border: none;
   padding: 1.75rem 2rem;
-  border-radius: 100px;
+  border-radius: 10px;
   font-size: 1.6rem;
   font-weight: bold;
   outline: none;
   cursor: pointer;
+
+  &--excel {
+    background-color: #4caf50;
+    transition: 300ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }

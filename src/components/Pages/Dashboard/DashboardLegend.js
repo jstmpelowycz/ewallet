@@ -1,10 +1,10 @@
 import React from "react";
 import DashboardCard from "../../UI/DashboardCard";
 import DashboardLegendItem from "./DashboardLegendItem";
-import { useSelector } from "react-redux";
+import {useSelector} from "react-redux";
 
 const DashboardLegend = () => {
-  const items = useSelector((state) => state.user.userData.categories);
+  const items = useSelector(({user}) => user.userData.categories);
 
   return (
     <DashboardCard title="Legend" cardClass="dashboard__legend">

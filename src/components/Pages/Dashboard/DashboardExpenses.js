@@ -1,17 +1,17 @@
 import React from "react";
 import DashboardCard from "../../UI/DashboardCard";
 import DashboardExpenseItem from "./DashboardExpenseItem";
-import { useSelector } from "react-redux";
-import { JsonToExcel } from "react-json-to-excel";
+import {useSelector} from "react-redux";
+import {JsonToExcel as JSONToExcel} from "react-json-to-excel";
 
 const JSONToExcelButton = (props) => {
   return (
-      <JsonToExcel
-          title="Download as Excel"
-          data={props.expenses}
-          fileName="Report"
-          btnClassName="custom-classname"
-      />
+    <JSONToExcel
+      title="Download as Excel"
+      data={props.expenses}
+      fileName="Report"
+      btnClassName="primary-btn primary-btn--excel"
+    />
   );
 }
 

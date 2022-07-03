@@ -2,12 +2,11 @@
   width: 100%;
   color: #fff;
   position: relative;
-  padding-top: 8rem;
 
   &__nav {
     width: 100%;
-    padding: 3rem;
-    position: fixed;
+    padding: 1rem 3rem;
+    position: sticky;
     top: 0;
     right: 0;
     background: $color-primary-1;
@@ -25,28 +24,47 @@
       border: none;
     }
 
-    &--info {
+    &-controls {
+      display: flex;
+      gap: 20px;
+    }
+
+    &-info {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    &--user {
+    &-user {
       font-size: 2.4rem;
       font-weight: 500;
     }
 
-    &--dropdown {
-      font-size: 3.6rem;
+    &-dropdown {
+      color: #545454;
+      transition: 300ms ease-in-out;
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:hover, &--open {
+        background-color: darkgrey;
+      }
     }
 
-    &--form {
+    &-form {
+      position: absolute;
+      top: 110%;
+      border-radius: 2rem;
+      right: 1%;
+      background-color: $color-secondary-1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 30%;
       padding: 6rem 0 4rem 0;
+      box-shadow: 0.5rem 0.4rem 1rem rgba(0, 0, 0, 0.5);
     }
 
     &-settings {
@@ -56,6 +74,22 @@
         font-size: 3rem;
         color: grey;
       }
+    }
+  }
+
+  &__income {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    &-amount {
+      padding: 3rem 7rem;
+      background-color: $color-secondary-1;
+      font-size: 24px;
+      font-weight: 500;
+      width: max-content;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
     }
   }
 
@@ -102,15 +136,24 @@
     }
   }
 
-  &__larger-screen {
+  &__view {
     @include respond(tab-land) {
       display: flex;
+      justify-content: center;
+      align-items: center;
       width: 80%;
       margin: 0 auto;
     }
   }
 
   &__legend {
+    max-height: 60vh;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     @include respond(tab-land) {
       width: 40%;
       height: min-content;
@@ -128,6 +171,11 @@
 }
 
 .logout {
-  margin-top: 2rem;
   background: red;
+  width: max-content;
+  transition: 300ms ease-in-out;
+
+  &:hover {
+    background-color: crimson;
+  }
 }
