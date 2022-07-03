@@ -5,31 +5,32 @@ import Button from "../../UI/Button";
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import 'bootstrap/dist/css/bootstrap.css';
 
-
-const DashboardTaxes = (props) => {
+const DashboardTaxes = () => {
     const [tax, setTax] = useState(0);
     const [showResults, setShowResults] = React.useState(false);
     const [esf, setESF] = useState(0);
     const [pdfo, setPDFO] = useState(0);
     const [vz, setVZ] = useState(0);
-    const enteredSalary = useRef();
+    const enteredSalaryRef = useRef();
 
     const submitForm = (e) => {
         e.preventDefault();
-        let salary = enteredSalary.current.value;
-        setTax(calculate(salary = {salary}));
+        const enteredSalary = Number(enteredSalaryRef.current?.value);
+        setTax(calculate(enteredSalary));
     }
 
-    const calculate = (props) => {
-        if (props.salary == 0)
+    const calculate = (salary) => {
+        if (!salary) {
             return 0;
+        }
+
         let esf;
-        let pdfo = props.salary * 0.18;
-        let vz = props.salary * 0.015;
-        if (props.salary < 6500)
+        let pdfo = salary * 0.18;
+        let vz = salary * 0.015;
+        if (salary < 6500)
             esf = 1430;
         else
-            esf = props.salary * 0.22;
+            esf = salary * 0.22;
 
         let tax = Math.round((esf + pdfo + vz) * 100) / 100;
         setESF(Math.round((100 * esf) / tax));
@@ -100,7 +101,8 @@ const DashboardTaxes = (props) => {
                     <div className="confirm__container--form-inputSalary">
                         <Input
                             placeholder="Your salary"
-                            ref={enteredSalary}
+                            type="number"
+                            ref={enteredSalaryRef}
                             required="required"
                             type="number"
                             max="1000000"
