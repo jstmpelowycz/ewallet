@@ -7,6 +7,7 @@ import LoadingSpinner from "../../UI/LoadingSpinner";
 import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "../../../store/user";
 import { Fragment } from "react";
+import DashboardTaxes from "./DashboardTaxes";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -46,6 +47,7 @@ const Dashboard = () => {
             <DashboardLegend />
           </div>
           <DashboardExpenses />
+          <DashboardTaxes />
         </Fragment>
       )}
     </div>
