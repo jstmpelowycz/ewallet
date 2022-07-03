@@ -12,6 +12,7 @@
       & p {
         padding-left: 1.25rem;
       }
+
     }
 
     &--line {
@@ -49,10 +50,46 @@
       &-5 {
         background: $graph-5;
       }
+
+      &-6 {
+        background: $graph-6;
+      }
+
+      &-7 {
+        background: $graph-7;
+      }
+
+      &-8 {
+        background: $graph-8;
+      }
     }
 
     &--price {
       font-weight: 500;
     }
+  }
+
+  &__taxItem {
+    padding: 0.5rem 0;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--description {
+      display: flex;
+
+      & p {
+        padding-left: 1.25rem;
+      }
+
+    }
+    &--meaning {
+      font-size: 1.2rem;
+      padding-top: 1rem;
+      margin-left: 0.8rem;
+      text-align: center;
+    }
+
   }
 }
