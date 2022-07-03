@@ -32,6 +32,7 @@ const AuthHome = () => {
           >
             Login
           </Button>
+          
           <Button
             type="button"
             btnClass="auth__option--btn"
