@@ -9,7 +9,7 @@ const JSONToExcelButton = (props) => {
       <JsonToExcel
           title="Download as Excel"
           data={props.expenses}
-          fileName="Report"
+          fileName={`Report-${new Date().toLocaleString("en-US", { month: "long" })}${new Date().getFullYear()}`}
           btnClassName="custom-classname"
       />
   );

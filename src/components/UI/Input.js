@@ -13,6 +13,7 @@ const Input = React.forwardRef((props, ref) => {
       value={props.value}
       autoFocus={props.autoFocus}
       readOnly={props.readOnly}
+      max={props.max}
     />
   );
 });
