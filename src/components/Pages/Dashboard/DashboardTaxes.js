@@ -32,9 +32,9 @@ const DashboardTaxes = (props) => {
             esf = props.salary * 0.22;
 
         let tax = Math.round((esf + pdfo + vz) * 100) / 100;
-        setESF((tax * esf) / 100);
-        setPDFO((tax * pdfo) / 100);
-        setVZ((tax * vz) / 100);
+        setESF(Math.round((100 * esf) / tax));
+        setPDFO(Math.round((100 * pdfo) / tax));
+        setVZ(Math.round((100 * vz) / tax));
         setShowResults(true);
         return tax;
     };
@@ -44,10 +44,10 @@ const DashboardTaxes = (props) => {
             <details>
                 <summary>Details</summary>
                 <div className="confirm__container--form-progressBar">
-                    <ProgressBar style={{height: "30px", fontSize: "15px"}}>
+                    <ProgressBar style={{height: "30px"}}>
                         <ProgressBar variant="success" now={esf} key={1}/>
-                        <ProgressBar variant="warning" now={pdfo} key={2}/>
-                        <ProgressBar variant="danger" now={vz} key={3}/>
+                        <ProgressBar variant="warning" now={pdfo} key={1}/>
+                        <ProgressBar variant="danger" now={vz} key={1}/>
                     </ProgressBar>
                 </div>
                 <li className="legend__taxItem">
