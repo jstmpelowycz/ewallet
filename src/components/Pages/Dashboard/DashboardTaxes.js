@@ -109,7 +109,7 @@ const DashboardTaxes = (props) => {
 
 
   return (
-    <DashboardCard title="Calculate your taxes">
+    <DashboardCard title="Calculate your taxes" >
       <Fragment>
         <form
           className="dashboard__taxes--form"
@@ -122,6 +122,7 @@ const DashboardTaxes = (props) => {
               ref={enteredSalaryRef}
               required="required"
               max="1000000"
+              min="1"
             />
 
             <select
