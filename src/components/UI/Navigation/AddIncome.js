@@ -43,7 +43,7 @@ export const AddIncome = (props) => {
           placeholder="Income Amount"
           required="required"
           min="1"
-          max="10000000"
+          max="10000000000"
         />
       </div>
       <Button btnClass="btn" type="submit">
