@@ -129,6 +129,8 @@ export const AddExpense = (props) => {
           placeholder="Expense Amount"
           ref={enteredExpenseAmountRef}
           required="required"
+          min="0.001"
+          max="10000000"
         />
       </div>
       <select
