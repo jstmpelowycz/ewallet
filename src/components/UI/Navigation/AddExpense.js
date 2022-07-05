@@ -130,7 +130,6 @@ export const AddExpense = (props) => {
           ref={enteredExpenseAmountRef}
           required="required"
           min="1"
-          max="100000000000"
         />
       </div>
       <select

@@ -6,12 +6,11 @@ import {JsonToExcel as JSONToExcel} from "react-json-to-excel";
 
 const JSONToExcelButton = (props) => {
   return (
-      <JSONToExcel
-          title="Download as Excel"
-          data={props.expenses}
-          fileName={`Report-${new Date().toLocaleString("en-US", { month: "long" })}${new Date().getFullYear()}`}
-          btnClassName="primary-btn primary-btn--excel"
-      />
+    <JSONToExcel
+      data={props.expenses}
+      fileName={`Report-${new Date().toLocaleString("en-US", {month: "long"})}${new Date().getFullYear()}`}
+      btnClassName="primary-btn primary-btn--excel"
+    />
   );
 }
 

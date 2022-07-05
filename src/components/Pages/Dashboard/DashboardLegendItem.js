@@ -13,7 +13,7 @@ const DashboardLegendItem = (props) => {
         <div className="legend__item--line-through"></div>
       </div>
       <p className="legend__item--price">
-        ${props.amount.toFixed(2)}
+        ₴{props.amount.toFixed(2)}
       </p>
     </li>
   );
