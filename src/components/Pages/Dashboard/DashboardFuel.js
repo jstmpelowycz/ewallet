@@ -5,7 +5,7 @@ import DashboardCard from "../../UI/DashboardCard";
 import Button from "../../UI/Button";
 import ProgressBar from 'react-bootstrap/ProgressBar'
 
-const DashboardFuel = (props) => {
+const DashboardFuel = () => {
   const [tax, setTax] = useState(0);
   const [listPrice, setListPrice] = useState(0);
   const [showResults, setShowResults] = useState(false);
@@ -70,6 +70,7 @@ const DashboardFuel = (props) => {
           }}
         >
           <ProgressBar
+            style={{fontFamily: 'Poppins'}}
             striped
             variant="success"
             now={(listPrice * 100) / (tax + listPrice)}
@@ -77,6 +78,7 @@ const DashboardFuel = (props) => {
             label={`List price: ₴${listPrice}`}
           />
           <ProgressBar
+            style={{fontFamily: 'Poppins'}}
             striped
             variant="danger"
             now={(tax * 100) / (tax + listPrice)}
@@ -98,7 +100,7 @@ const DashboardFuel = (props) => {
         >
           <div className="confirm__container--form-inputSalary">
             <Input
-              placeholder="How much does a full tank cost you?"
+              placeholder="How much does a full tank cost?"
               type="number"
               ref={enteredPriceRef}
               required="required"

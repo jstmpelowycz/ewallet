@@ -58,7 +58,7 @@ const Dashboard = () => {
 
           <div className="dashboard__income">
             <p className="dashboard__income-amount">
-              Total Income: ${totalIncome}
+              Total Income: ₴{totalIncome}
             </p>
           </div>
 

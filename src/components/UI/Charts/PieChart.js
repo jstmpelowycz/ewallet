@@ -52,7 +52,7 @@ const PieChartDisplay = () => {
         <div>
           <p>Total:</p>
           <p>
-            <strong>${totalExpenses.toFixed(2)}</strong>
+            <strong>₴{totalExpenses.toFixed(2)}</strong>
           </p>
         </div>
       </div>
