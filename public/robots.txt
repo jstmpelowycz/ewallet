@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /index.js
+
+Sitemap: https://www.ewallet.com/sitemap.xml

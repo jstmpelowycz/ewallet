@@ -87,14 +87,20 @@
       &-result {
         display: flex;
         justify-content: center;
-        margin-top: 3rem;
+        margin-top: 2rem;
         position: relative;
       }
 
       &-result h3{
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         font-size: 22px;
         margin-right: 20px;
+        margin-left: 20px;
+      }
+
+      &-result Input{
+        margin-top: 1rem;
+        margin-right: 40px;
       }
 
       &-details {
@@ -103,6 +109,15 @@
         margin-top: -2.3rem;
         margin-bottom: -2rem;
         position: relative;
+      }
+
+      &-results {
+        width: 70%;
+        border-radius: 1rem;
+        margin-top: -2.3rem;
+        margin-bottom: -2rem;
+        position: relative;
+        display: inline-block;
       }
 
       &-progressBar{

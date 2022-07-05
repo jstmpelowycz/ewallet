@@ -41,7 +41,9 @@ export const AddIncome = (props) => {
           type="number"
           ref={incomeAmountRef}
           placeholder="Income Amount"
-          required
+          required="required"
+          min="1"
+          max="10000000000"
         />
       </div>
       <Button btnClass="btn" type="submit">

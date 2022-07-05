@@ -97,9 +97,6 @@ const AuthLogin = () => {
           <Button type="submit">Login</Button>
         </form>
 
-        <p className="confirm__forgot-password">
-          Forgot Password?
-        </p>
         <p className="confirm__change-auth">
           Don't have an account?{" "}
 
