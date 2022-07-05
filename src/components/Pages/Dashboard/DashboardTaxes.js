@@ -29,16 +29,9 @@ const DashboardTaxes = (props) => {
       return 0;
     }
 
-    let esf;
     const pdfo = value * 0.18;
     const vz = value * 0.015;
-
-    if (value < 6500) {
-      esf = 1430;
-    } else {
-      esf = value * 0.22;
-    }
-
+    const esf = value < 6500 ? 1430 : value * 0.22;
     const tax = Math.round((esf + pdfo + vz) * 100) / 100;
 
     setESF(Math.round((100 * esf) / tax));
@@ -109,7 +102,7 @@ const DashboardTaxes = (props) => {
 
 
   return (
-    <DashboardCard title="Calculate your taxes" >
+    <DashboardCard title="Calculate your taxes">
       <Fragment>
         <form
           className="dashboard__taxes--form"
@@ -142,7 +135,7 @@ const DashboardTaxes = (props) => {
             <h3>Your taxes:</h3>
 
             <Input
-              value={"₴ " + tax}
+              value={"₴" + tax}
               readOnly="readOnly"
             />
           </div>
